@@ -98,13 +98,33 @@ pub fn build(b: *std.Build) void {
 
     // Dynamic Programming algorithms
     if (std.mem.eql(u8, op, "dp/coinChange"))
-        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "coinChange.zig", .category = "dynamicProgramming" });
+        build_algorithm(b, .{
+            .optimize = optimize,
+            .target = target,
+            .name = "coinChange.zig",
+            .category = "dynamicProgramming",
+        });
     if (std.mem.eql(u8, op, "dp/knapsack"))
-        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "knapsack.zig", .category = "dynamicProgramming" });
+        build_algorithm(b, .{
+            .optimize = optimize,
+            .target = target,
+            .name = "knapsack.zig",
+            .category = "dynamicProgramming",
+        });
     if (std.mem.eql(u8, op, "dp/longestIncreasingSubsequence"))
-        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "longestIncreasingSubsequence.zig", .category = "dynamicProgramming" });
+        build_algorithm(b, .{
+            .optimize = optimize,
+            .target = target,
+            .name = "longestIncreasingSubsequence.zig",
+            .category = "dynamicProgramming",
+        });
     if (std.mem.eql(u8, op, "dp/editDistance"))
-        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "editDistance.zig", .category = "dynamicProgramming" });
+        build_algorithm(b, .{
+            .optimize = optimize,
+            .target = target,
+            .name = "editDistance.zig",
+            .category = "dynamicProgramming",
+        });
 
     // Math algorithms
     if (std.mem.eql(u8, op, "math/ceil"))
