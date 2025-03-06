@@ -60,6 +60,13 @@ pub fn build(b: *std.Build) void {
         });
 
     // Data Structures algorithms
+    if (std.mem.eql(u8, op, "ds/trie"))
+        build_algorithm(b, .{
+            .optimize = optimize,
+            .target = target,
+            .name = "trie.zig",
+            .category = "dataStructures",
+        });
     if (std.mem.eql(u8, op, "ds/linkedlist"))
         build_algorithm(b, .{
             .optimize = optimize,
@@ -91,33 +98,13 @@ pub fn build(b: *std.Build) void {
 
     // Dynamic Programming algorithms
     if (std.mem.eql(u8, op, "dp/coinChange"))
-        build_algorithm(b, .{
-            .optimize = optimize,
-            .target = target,
-            .name = "coinChange.zig",
-            .category = "dynamicProgramming"
-        });
+        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "coinChange.zig", .category = "dynamicProgramming" });
     if (std.mem.eql(u8, op, "dp/knapsack"))
-        build_algorithm(b, .{
-            .optimize = optimize,
-            .target = target,
-            .name = "knapsack.zig",
-            .category = "dynamicProgramming"
-        });
+        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "knapsack.zig", .category = "dynamicProgramming" });
     if (std.mem.eql(u8, op, "dp/longestIncreasingSubsequence"))
-        build_algorithm(b, .{
-            .optimize = optimize,
-            .target = target,
-            .name = "longestIncreasingSubsequence.zig",
-            .category = "dynamicProgramming"
-        });
+        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "longestIncreasingSubsequence.zig", .category = "dynamicProgramming" });
     if (std.mem.eql(u8, op, "dp/editDistance"))
-        build_algorithm(b, .{
-            .optimize = optimize,
-            .target = target,
-            .name = "editDistance.zig",
-            .category = "dynamicProgramming"
-        });
+        build_algorithm(b, .{ .optimize = optimize, .target = target, .name = "editDistance.zig", .category = "dynamicProgramming" });
 
     // Math algorithms
     if (std.mem.eql(u8, op, "math/ceil"))
